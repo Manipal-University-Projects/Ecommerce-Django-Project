@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.card {
+  margin-right: 15%; /* Added */
+  margin-left: 15%;
+}
+
+#myForm {
+  height: 100px;
+}
+
+.card-text {
+  word-wrap: break-word;
+}
