@@ -31,3 +31,6 @@ git branch -d Navbar
 git push origin --delete Login
 git push origin --delete Navbar
 ```
+## ALl Extensions
+
+1. IntelliSense for CSS class names in HTML
