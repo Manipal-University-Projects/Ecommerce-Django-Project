@@ -6,6 +6,26 @@
   }
 }
 
+.navbar-custom {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 0, 0, 0.9406027059261205) 0%,
+    rgba(8, 6, 13, 1) 23%,
+    rgba(8, 8, 18, 1) 53%,
+    rgba(105, 105, 105, 1) 100%
+  );
+}
+
+.jumbotron {
+  background: url("https://image.shutterstock.com/image-photo/panorama-black-stone-brick-texture-260nw-1109089712.jpg")
+    center / cover;
+}
+
+.nav-item > a {
+  color: white;
+  font-size: 20px;
+}
+
 .card-horizontal {
   display: flex;
   flex: 1 1 auto;
