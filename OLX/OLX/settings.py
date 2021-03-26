@@ -25,7 +25,7 @@ SECRET_KEY = '7ui7%13cl$)wmez9qq(of3#-1+&c)b^7s+67zu#v2s6-z)f2*6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1.xip.io']
+ALLOWED_HOSTS = []
 
 
 # Application definition

@@ -11,15 +11,18 @@
   flex: 1 1 auto;
 }
 
-.card {
-  margin-right: 15%; /* Added */
-  margin-left: 15%;
-}
-
 #myForm {
   height: 100px;
 }
 
 .card-text {
   word-wrap: break-word;
+}
+
+.card,
+.card-deck,
+#new_arrivals,
+#top_picks {
+  margin-right: 15%; /* Added */
+  margin-left: 15%;
 }
