@@ -18,6 +18,7 @@
 
 <body>
 
+    {% block content %}
     <nav class="navbar navbar-expand-md navbar-custom">
         <a class="navbar-brand" href="#">
             <img src="../static/images/OLX-Logo-2006.jpg" height="50px" />
@@ -46,9 +47,18 @@
             </ul>
         </div>
     </nav>
-
+    {% endblock %}
 
     <div class="jumbotron text-center">
+
+        <h1 style="color: white;">We'd love to hear from you</h1>
+
+        <p class="lead" style="color: white; font-size: 30px;">The only job site on the web dedicated to selling things
+            you couldn't sell
+            at comfort of your
+            bed</p>
+
+
         <!--Search Bar-->
         <form class="form-inline justify-content-center" method="GET" id="myForm">
             <input class="form-control col-11 mt-3 bg-light" name="query" type="text" c
@@ -57,10 +67,7 @@
 
             <button class="btn btn-success  col-1 mt-3" type="submit">Search</button>
         </form>
-        <p class="lead" style="color: white; font-size: 30px;">The only job site on the web dedicated to selling things
-            you couldn't sell
-            at comfort of your
-            bed</p>
+
         <hr class="my-4">
         <p class="lead">
             <a class="btn btn-info btn-md learn_more_buttons" href="#" role="button">Learn More about our OLX app</a>
@@ -71,40 +78,40 @@
 
 
     <!-- 
-    <div class="container-fluid card-deck">
-        <div class="card">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </div>
-        </div>
-    </div> -->
+                <div class="container-fluid card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                                content. This content is a little bit longer.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This card has even longer content than the first to show that equal height action.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                </div>
+                            </div>
+                        </div> -->
 
     <h1 id="top_picks">Top Picks</h1>
 
@@ -141,27 +148,7 @@
 
     <h1 id="new_arrivals">New Arrivals</h1>
 
-    <div class="container-fluid" id="cards">
-        <div class="row">
-            <div class="col-12 mt-3">
-                <div class="card">
-                    <div class="card-horizontal">
-                        <div class="img-square-wrapper">
-                            <img class="img-responsive" src="http://via.placeholder.com/300x180" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% for i in data %}
 
     <div class="container-fluid" id="cards">
         <div class="row">
@@ -185,49 +172,8 @@
         </div>
     </div>
 
-    <div class="container-fluid" id="cards">
-        <div class="row">
-            <div class="col-12 mt-3">
-                <div class="card">
-                    <div class="card-horizontal">
-                        <div class="img-square-wrapper">
-                            <img class="img-responsive" src="http://via.placeholder.com/300x180" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 
-    <div class="container-fluid" id="cards">
-        <div class="row">
-            <div class="col-12 mt-3">
-                <div class="card">
-                    <div class="card-horizontal">
-                        <div class="img-square-wrapper">
-                            <img class="img-responsive" src="http://via.placeholder.com/300x180" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Card title</h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- BOOTSTRAP JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -240,5 +186,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
+
+
 
 </html>
